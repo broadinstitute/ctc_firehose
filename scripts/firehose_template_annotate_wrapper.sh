@@ -7,7 +7,7 @@
 
 ls $1/*bam | grep -v Solexa > all_bams.txt
 
-Rscript /xchip/cga_home/mara/projects/ctc_sigma/scripts/firehose_template_annotate.R all_bams.txt $2 $3
+Rscript ../scripts/firehose_template_annotate.R all_bams.txt $2 $3
 
 echo "importing samples to workspace: An_CTC_SIGMA_QC..."
 fiss sample_import An_CTC_SIGMA_QC upload_lowpass_bams.txt

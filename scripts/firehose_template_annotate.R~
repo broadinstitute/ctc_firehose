@@ -36,7 +36,7 @@ for (i in seq(1,dim(bams)[1])) {
 	}
 }
 
-print("removing empty rows that can be artifact of saving in excel. these rows start with an X in R")
+print("removing empty rows - start with X - that can be artifact of saving in excel")
 select_columns = colnames(template)[!(seq(1,length(colnames(template))) %in% grep("^X",colnames(template)))]
 print(paste("columns to upload to firehose include:", select_columns))
 template = template[,select_columns]
